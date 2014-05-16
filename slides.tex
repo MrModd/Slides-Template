@@ -1,0 +1,77 @@
+% ==================================================================== %
+% Generic LaTeX template for a presentation
+% Copyright (C) 2014  Federico "MrModd" Cosentino (http://mrmodd.it/)
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% ==================================================================== %
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+% Put your slides in the following part
+
+\section{First section}
+\subsection{First subsection}
+
+\begin{frame}{First slide title}
+	\begin{itemize}
+		\item {
+			First!!!
+			\pause
+		}
+		\item {
+			Second!
+		}
+		\item<4-> {
+			Fourth!
+		}
+		\item<3-> {
+			Third... \uncover<5-> {Voil\`{a}!}
+		}
+	\end{itemize}
+	% You can include images with:
+	%\includegraphics[height=5cm]{Image}
+\end{frame}
+
+\subsection{Second subsection}
+
+\begin{frame}{Second slide title}
+	\begin{block}{Block title}
+		Yo!
+	\end{block}
+	\begin{theorem}
+		Theorem
+	\end{theorem}
+	\begin{example}
+		Example
+	\end{example}
+\end{frame}
+
+\section{Second section}
+\subsection{First subsection}
+
+\begin{frame}{Third slide title}
+	\begin{columns}
+		\begin{column}{0.8\textwidth}
+			This column occupy 80\% of the slide width...
+			\pause
+		\end{column}
+		\begin{column}{0.2\textwidth}
+			And this just 20\%.
+		\end{column}
+	\end{columns}
+\end{frame}

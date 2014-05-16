@@ -1,0 +1,29 @@
+% ==================================================================== %
+% Generic LaTeX template for a presentation
+% Copyright (C) 2014  Federico "MrModd" Cosentino (http://mrmodd.it/)
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% ==================================================================== %
+
+\documentclass{beamer}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+% All images must be placed under "images" directory and must be in png format
+
+%Next macro is used for print red code
+\newcommand{\code}[1]{\texttt{\textcolor{red}{#1}}} %[1] tells there's one argument (that is #1)
+
+\include{header}
+
+\begin{document}
+\include{slides}
+\end{document}
