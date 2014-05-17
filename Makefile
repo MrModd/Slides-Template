@@ -1,6 +1,9 @@
 LATEX = pdflatex
 
-Slides.pdf: index.tex header.tex slides.tex
+TEXFILES=$(wildcard *.tex)
+IMAGES=$(wildcard images/*.png)
+
+Slides.pdf: $(TEXFILES) $(IMAGES)
 	$(LATEX) -halt-on-error -jobname Slides index.tex
 	$(LATEX) -halt-on-error -jobname Slides index.tex
 	$(LATEX) -halt-on-error -jobname Slides index.tex
