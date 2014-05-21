@@ -18,11 +18,12 @@
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 % All images must be placed under "images" directory and must be in png format
-
-%Next macro is used for print red code
-\newcommand{\code}[1]{\texttt{\textcolor{red}{#1}}} %[1] tells there's one argument (that is #1)
+\newcommand{\sourcepath}{sources/}
+% All source codes must be placed under "sources" directory. A list of available
+% languages can be found in lang_header.tex file
 
 \include{header}
+\include{lang_header}
 
 \begin{document}
 \include{slides}

@@ -66,7 +66,7 @@
 
 \begin{frame}{Third slide title}
 	\begin{columns}
-		\begin{column}{0.8\textwidth}
+		\begin{column}{0.8\textwidth} % The sum of all column width should not exceed \textwidth value
 			This column occupy 80\% of the slide width...
 			\pause
 		\end{column}
@@ -78,4 +78,20 @@
 			\end{figure}
 		\end{column}
 	\end{columns}
+\end{frame}
+
+\section{Third section}
+
+\begin{frame}{Example of code}
+	\ccode{my_c_code}
+	% For other languages substitute ccode with, for example, javacode, pythoncode, ...
+	% Check lang_header.tex for a list of all available languages
+\end{frame}
+
+\begin{frame}{Other example}
+	\centering % Horizontally
+	% This just print a piece of code in red and monospace font
+	\code{
+		Some code in red
+	}
 \end{frame}

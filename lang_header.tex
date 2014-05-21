@@ -1,0 +1,197 @@
+\usepackage{listings} % Required for insertion of code
+\usepackage{color} % Required for custom colors
+
+%----------------------------------------------------------------------------------------
+%	CODE INCLUSION CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+% Custom colors
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+% Next macro is used for print red code
+\newcommand{\code}[1]{\texttt{\textcolor{red}{#1}}} % [1] tells there's one argument (#1)
+
+\lstloadlanguages{[ANSI]C,
+		[ISO]C++,
+		Java,
+		Python,
+		bash,
+		Perl
+} % For a list of other languages supported see: ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf
+
+\newcommand{\customlit}{
+	\lstset{
+		literate={à}{{\`{a}}}1
+			{è}{{\`{e}}}1
+			{é}{{\'{e}}}1
+			{ì}{{\`{i}}}1
+			{ò}{{\`{o}}}1
+			{ù}{{\`{u}}}1
+			{È}{{\`{E}}}1
+			% These are special character used in italian language
+			% If not overridden they are rendered wrong
+			% Add other literal in the format {a}{{b}}1
+			% That is: when you read a, substitute b
+			% Check on the internet for more complex literal formats
+	}
+}
+
+% The first parameter is the filename of the script (without extension), the second parameter is the caption
+% \perlcode{}{}
+\newcommand{\perlcode}[1]{
+\lstset{language=Perl,
+		inputencoding=utf8,
+		frame=single,
+		showspaces=false,
+		showtabs=false,
+		breaklines=true,
+		breakatwhitespace=false,
+		showstringspaces=false,
+		basicstyle=\ttfamily\scriptsize,
+		keywordstyle=\color{pblue}\scriptsize,
+		stringstyle=\color{pred}\scriptsize,
+		numberstyle=\color{pblue}\scriptsize,
+		commentstyle=\color{pgreen}\scriptsize,
+		morecomment=[l][\color{pblue}\scriptsize]{...},
+		tabsize=4,
+		prebreak={},
+		postbreak={}
+}
+\customlit
+\begin{itemize}
+\item[]\lstinputlisting[label=#1]{\sourcepath#1.pl}
+\end{itemize}
+}
+
+% \ccode{}{}
+\newcommand{\ccode}[1]{
+\lstset{language=C,
+		inputencoding=utf8,
+		frame=single,
+		showspaces=false,
+		showtabs=false,
+		breaklines=true,
+		breakatwhitespace=false,
+		showstringspaces=false,
+		basicstyle=\ttfamily\scriptsize,
+		keywordstyle=\color{pblue}\scriptsize,
+		stringstyle=\color{pred}\scriptsize,
+		numberstyle=\color{pblue}\scriptsize,
+		commentstyle=\color{pgreen}\scriptsize,
+		morecomment=[l][\color{pblue}\scriptsize]{...},
+		tabsize=4,
+		prebreak={},
+		postbreak={}
+}
+\customlit
+\begin{itemize}
+\item[]\lstinputlisting[label=#1]{\sourcepath#1.c}
+\end{itemize}
+}
+
+% \cppcode{}{}
+\newcommand{\cppcode}[1]{
+\lstset{language=C++,
+		inputencoding=utf8,
+		frame=single,
+		showspaces=false,
+		showtabs=false,
+		breaklines=true,
+		breakatwhitespace=false,
+		showstringspaces=false,
+		basicstyle=\ttfamily\scriptsize,
+		keywordstyle=\color{pblue}\scriptsize,
+		stringstyle=\color{pred}\scriptsize,
+		numberstyle=\color{pblue}\scriptsize,
+		commentstyle=\color{pgreen}\scriptsize,
+		morecomment=[l][\color{pblue}\scriptsize]{...},
+		tabsize=4,
+		prebreak={},
+		postbreak={}
+}
+\customlit
+\begin{itemize}
+\item[]\lstinputlisting[label=#1]{\sourcepath#1.cpp}
+\end{itemize}
+}
+
+% \javacode{}{}
+\newcommand{\javacode}[1]{
+\lstset{language=Java,
+		inputencoding=utf8,
+		frame=single,
+		showspaces=false,
+		showtabs=false,
+		breaklines=true,
+		breakatwhitespace=false,
+		showstringspaces=false,
+		basicstyle=\ttfamily\scriptsize,
+		keywordstyle=\color{pblue}\scriptsize,
+		stringstyle=\color{pred}\scriptsize,
+		numberstyle=\color{pblue}\scriptsize,
+		commentstyle=\color{pgreen}\scriptsize,
+		morecomment=[l][\color{pblue}\scriptsize]{...},
+		tabsize=4,
+		prebreak={},
+		postbreak={}
+}
+\customlit
+\begin{itemize}
+\item[]\lstinputlisting[label=#1]{\sourcepath#1.java}
+\end{itemize}
+}
+
+% \pythoncode{}{}
+\newcommand{\pythoncode}[1]{
+\lstset{language=Python,
+		inputencoding=utf8,
+		frame=single,
+		showspaces=false,
+		showtabs=false,
+		breaklines=true,
+		breakatwhitespace=false,
+		showstringspaces=false,
+		basicstyle=\ttfamily\scriptsize,
+		keywordstyle=\color{pblue}\scriptsize,
+		stringstyle=\color{pred}\scriptsize,
+		numberstyle=\color{pblue}\scriptsize,
+		commentstyle=\color{pgreen}\scriptsize,
+		morecomment=[l][\color{pblue}\scriptsize]{...},
+		tabsize=4,
+		prebreak={},
+		postbreak={}
+}
+\customlit
+\begin{itemize}
+\item[]\lstinputlisting[label=#1]{\sourcepath#1.py}
+\end{itemize}
+}
+
+% \bashcode{}{}
+\newcommand{\bashcode}[1]{
+\lstset{language=bash,
+		inputencoding=utf8,
+        frame=single,
+		showspaces=false,
+		showtabs=false,
+		breaklines=true,
+		breakatwhitespace=false,
+		showstringspaces=false,
+		basicstyle=\ttfamily\scriptsize,
+		keywordstyle=\color{pblue}\scriptsize,
+		stringstyle=\color{pred}\scriptsize,
+		numberstyle=\color{pblue}\scriptsize,
+		commentstyle=\color{pgreen}\scriptsize,
+		morecomment=[l][\color{pblue}\scriptsize]{...}, 
+        tabsize=4,
+		prebreak={},
+		postbreak={}
+}
+\customlit
+\begin{itemize}
+\item[]\lstinputlisting[label=#1]{\sourcepath#1.sh}
+\end{itemize}
+}
