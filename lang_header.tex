@@ -1,3 +1,18 @@
+% =========================================================================== %
+% Generic LaTeX template for a document
+% Copyright (C) 2014  Federico "MrModd" Cosentino (http://mrmodd.it/)
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% =========================================================================== %
+
 \usepackage{listings} % Required for insertion of code
 \usepackage{color} % Required for custom colors
 
@@ -6,10 +21,12 @@
 %----------------------------------------------------------------------------------------
 
 % Custom colors
+\definecolor{maroon}{rgb}{0.5,0,0}
 \definecolor{pblue}{rgb}{0.13,0.13,1}
 \definecolor{pgreen}{rgb}{0,0.5,0}
 \definecolor{pred}{rgb}{0.9,0,0}
 \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\definecolor{Blue}{rgb}{0,0,1}
 
 % Next macro is used for print red code
 \newcommand{\code}[1]{\texttt{\textcolor{red}{#1}}} % [1] tells there's one argument (#1)
@@ -19,7 +36,9 @@
 		Java,
 		Python,
 		bash,
-		Perl
+		Perl,
+		XML,
+		HTML
 } % For a list of other languages supported see: ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf
 
 \newcommand{\customlit}{
@@ -40,7 +59,7 @@
 }
 
 % The first parameter is the filename of the script (without extension), the second parameter is the caption
-% \perlcode{}{}
+% \perlcode{source_file}
 \newcommand{\perlcode}[1]{
 \lstset{language=Perl,
 		inputencoding=utf8,
@@ -51,12 +70,15 @@
 		breakatwhitespace=false,
 		showstringspaces=false,
 		basicstyle=\ttfamily\scriptsize,
-		keywordstyle=\color{pblue}\scriptsize,
-		stringstyle=\color{pred}\scriptsize,
-		numberstyle=\color{pblue}\scriptsize,
-		commentstyle=\color{pgreen}\scriptsize,
-		morecomment=[l][\color{pblue}\scriptsize]{...},
+		keywordstyle=\color{pblue},
+		stringstyle=\color{pred},
+		numberstyle=\color{Blue},
+		commentstyle=\color{pgreen},
+		morecomment=[l][\color{Blue}]{...},
 		tabsize=4,
+		numbers=left,
+		firstnumber=1,
+		stepnumber=5,
 		prebreak={},
 		postbreak={}
 }
@@ -66,7 +88,7 @@
 \end{itemize}
 }
 
-% \ccode{}{}
+% \ccode{source_file}
 \newcommand{\ccode}[1]{
 \lstset{language=C,
 		inputencoding=utf8,
@@ -77,12 +99,15 @@
 		breakatwhitespace=false,
 		showstringspaces=false,
 		basicstyle=\ttfamily\scriptsize,
-		keywordstyle=\color{pblue}\scriptsize,
-		stringstyle=\color{pred}\scriptsize,
-		numberstyle=\color{pblue}\scriptsize,
-		commentstyle=\color{pgreen}\scriptsize,
-		morecomment=[l][\color{pblue}\scriptsize]{...},
+		keywordstyle=\color{pblue},
+		stringstyle=\color{pred},
+		numberstyle=\color{Blue},
+		commentstyle=\color{pgreen},
+		morecomment=[l][\color{Blue}]{...},
 		tabsize=4,
+		numbers=left,
+		firstnumber=1,
+		stepnumber=5,
 		prebreak={},
 		postbreak={}
 }
@@ -92,7 +117,7 @@
 \end{itemize}
 }
 
-% \cppcode{}{}
+% \cppcode{source_file}
 \newcommand{\cppcode}[1]{
 \lstset{language=C++,
 		inputencoding=utf8,
@@ -103,12 +128,15 @@
 		breakatwhitespace=false,
 		showstringspaces=false,
 		basicstyle=\ttfamily\scriptsize,
-		keywordstyle=\color{pblue}\scriptsize,
-		stringstyle=\color{pred}\scriptsize,
-		numberstyle=\color{pblue}\scriptsize,
-		commentstyle=\color{pgreen}\scriptsize,
-		morecomment=[l][\color{pblue}\scriptsize]{...},
+		keywordstyle=\color{pblue},
+		stringstyle=\color{pred},
+		numberstyle=\color{Blue},
+		commentstyle=\color{pgreen},
+		morecomment=[l][\color{Blue}]{...},
 		tabsize=4,
+		numbers=left,
+		firstnumber=1,
+		stepnumber=5,
 		prebreak={},
 		postbreak={}
 }
@@ -118,7 +146,7 @@
 \end{itemize}
 }
 
-% \javacode{}{}
+% \javacode{source_file}
 \newcommand{\javacode}[1]{
 \lstset{language=Java,
 		inputencoding=utf8,
@@ -129,12 +157,15 @@
 		breakatwhitespace=false,
 		showstringspaces=false,
 		basicstyle=\ttfamily\scriptsize,
-		keywordstyle=\color{pblue}\scriptsize,
-		stringstyle=\color{pred}\scriptsize,
-		numberstyle=\color{pblue}\scriptsize,
-		commentstyle=\color{pgreen}\scriptsize,
-		morecomment=[l][\color{pblue}\scriptsize]{...},
+		keywordstyle=\color{pblue},
+		stringstyle=\color{pred},
+		numberstyle=\color{Blue},
+		commentstyle=\color{pgreen},
+		morecomment=[l][\color{Blue}]{...},
 		tabsize=4,
+		numbers=left,
+		firstnumber=1,
+		stepnumber=5,
 		prebreak={},
 		postbreak={}
 }
@@ -144,7 +175,7 @@
 \end{itemize}
 }
 
-% \pythoncode{}{}
+% \pythoncode{source_file}
 \newcommand{\pythoncode}[1]{
 \lstset{language=Python,
 		inputencoding=utf8,
@@ -155,12 +186,15 @@
 		breakatwhitespace=false,
 		showstringspaces=false,
 		basicstyle=\ttfamily\scriptsize,
-		keywordstyle=\color{pblue}\scriptsize,
-		stringstyle=\color{pred}\scriptsize,
-		numberstyle=\color{pblue}\scriptsize,
-		commentstyle=\color{pgreen}\scriptsize,
-		morecomment=[l][\color{pblue}\scriptsize]{...},
+		keywordstyle=\color{pblue},
+		stringstyle=\color{pred},
+		numberstyle=\color{Blue},
+		commentstyle=\color{pgreen},
+		morecomment=[l][\color{Blue}]{...},
 		tabsize=4,
+		numbers=left,
+		firstnumber=1,
+		stepnumber=5,
 		prebreak={},
 		postbreak={}
 }
@@ -170,7 +204,7 @@
 \end{itemize}
 }
 
-% \bashcode{}{}
+% \bashcode{source_file}
 \newcommand{\bashcode}[1]{
 \lstset{language=bash,
 		inputencoding=utf8,
@@ -181,17 +215,82 @@
 		breakatwhitespace=false,
 		showstringspaces=false,
 		basicstyle=\ttfamily\scriptsize,
-		keywordstyle=\color{pblue}\scriptsize,
-		stringstyle=\color{pred}\scriptsize,
-		numberstyle=\color{pblue}\scriptsize,
-		commentstyle=\color{pgreen}\scriptsize,
-		morecomment=[l][\color{pblue}\scriptsize]{...}, 
+		keywordstyle=\color{pblue},
+		stringstyle=\color{pred},
+		numberstyle=\color{Blue},
+		commentstyle=\color{pgreen},
+		morecomment=[l][\color{Blue}]{...},
         tabsize=4,
+        numbers=left,
+        firstnumber=1,
+        stepnumber=5,
 		prebreak={},
 		postbreak={}
 }
 \customlit
 \begin{itemize}
 \item[]\lstinputlisting[label=#1]{\sourcepath#1.sh}
+\end{itemize}
+}
+
+% \xmlcode{source_file}
+\newcommand{\xmlcode}[1]{
+\lstset{inputencoding=utf8,
+        frame=single,
+		showspaces=false,
+		showtabs=false,
+		breaklines=true,
+		breakatwhitespace=false,
+		showstringspaces=false,
+		basicstyle=\ttfamily\scriptsize,
+		stringstyle=\color{Blue},
+		commentstyle=\color{pgreen},
+		identifierstyle=\color{maroon},
+		morestring=[s]{"}{"},
+		morecomment=[s]{?}{?},
+		morecomment=[s]{!--}{--},
+		moredelim=[s][\color{Black}]{>}{<},
+		moredelim=[s][\color{Red}]{\ }{=},
+        tabsize=4,
+        numbers=left,
+        firstnumber=1,
+        stepnumber=5,
+		prebreak={},
+		postbreak={}
+}
+\customlit
+\begin{itemize}
+\item[]\lstinputlisting[label=#1]{\sourcepath#1.xml}
+\end{itemize}
+}
+
+% \htmlcode{source_file}
+\newcommand{\htmlcode}[1]{
+\lstset{inputencoding=utf8,
+        frame=single,
+		showspaces=false,
+		showtabs=false,
+		breaklines=true,
+		breakatwhitespace=false,
+		showstringspaces=false,
+		basicstyle=\ttfamily\scriptsize,
+		stringstyle=\color{Blue},
+		commentstyle=\color{pgreen},
+		identifierstyle=\color{maroon},
+		morestring=[s]{"}{"},
+		morecomment=[s]{?}{?},
+		morecomment=[s]{!--}{--},
+		moredelim=[s][\color{Black}]{>}{<},
+		moredelim=[s][\color{Red}]{\ }{=},
+        tabsize=4,
+        numbers=left,
+        firstnumber=1,
+        stepnumber=5,
+		prebreak={},
+		postbreak={}
+}
+\customlit
+\begin{itemize}
+\item[]\lstinputlisting[label=#1]{\sourcepath#1.html}
 \end{itemize}
 }
