@@ -16,6 +16,8 @@
 \documentclass{beamer}
 %\documentclass[handout]{beamer} % Comment first line and uncomment this if you want to ignore all pauses on slides
 
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
 % Uncomment next two lines if you want to generate a PDF with 4 slides per page
 %\usepackage{pgfpages}
 %\pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm,landscape]
@@ -24,6 +26,7 @@
 %\usepackage{pgfpages}
 %\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 % All images must be placed under "images" directory and must be in png format
@@ -42,10 +45,13 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Outline}
-  \tableofcontents
-  % You might wish to add the option [pausesections]
-\end{frame}
+% Uncomment this if you explicitly want a slide with table of comment
+% But remember to comment "AtBeginSection" command in header.txt or you will see
+% the outline twice.
+% \begin{frame}{Outline}
+%   \tableofcontents
+%   % You might wish to add the option [pausesections]
+% \end{frame}
 
 % Include your slides in file slides.tex
 \include{slides}

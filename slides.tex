@@ -1,7 +1,7 @@
 \section{First section}
 \subsection{First subsection}
 
-\begin{frame}{First slide title}
+\begin{frame}{First slide title}{Subtitle}
 	\begin{itemize}
 		\item {
 			First!!!
@@ -27,6 +27,12 @@
 	\begin{block}{Block title}
 		Yo!
 	\end{block}
+	\begin{alertblock}{Title}
+	  Example
+	\end{alertblock}
+	\begin{exampleblock}{Title2}
+	  Example
+	\end{exampleblock}
 	\begin{theorem}
 		Theorem
 	\end{theorem}
@@ -68,4 +74,14 @@
 	\code{
 		Some code in red
 	}
+\end{frame}
+
+\begin{frame}[shrink=20]{Text with overflow} % Reduce font size if text overflows
+  \lipsum[1-2]
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Text with pagebreak} % Break slide if text overflows
+  \lipsum[1-2]
+  \framebreak % Force a new frame here
+  Text after frame break.
 \end{frame}
